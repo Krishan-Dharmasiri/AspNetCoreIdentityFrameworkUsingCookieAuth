@@ -1,0 +1,58 @@
+﻿@model AspNetCoreIdentityWithCookieAuthentication.ViewModels.RegisterViewModel
+
+@{ 
+    ViewBag.Title = "Register";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.UserName)
+        @Html.TextBoxFor(m => m.UserName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.EditorFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.ConfirmPassword)
+        @Html.PasswordFor(m => m.ConfirmPassword)
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+    </div>
+    <div>
+        <input type="submit" value="Register" />
+     </div>
+}
+
+@*<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ValidationSummary.ModelOnly"></div>
+    <div>
+        <label asp-for="UserName">User Name</label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword">Confirm Password</label>
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div>
+        <input type="submit" value="Register" />
+     </div>
+</form>*@
