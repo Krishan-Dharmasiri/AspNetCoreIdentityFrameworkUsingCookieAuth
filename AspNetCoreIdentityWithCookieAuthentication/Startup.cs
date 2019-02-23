@@ -46,6 +46,8 @@ namespace AspNetCoreIdentityWithCookieAuthentication
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseNodeModules(env);
+
             app.UseAuthentication();
             
             app.UseMvc(ConfigureRoute);
